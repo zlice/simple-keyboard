@@ -24,8 +24,8 @@
     <switch>
         <case latin:showExtraChars="true">
             <Key latin:keySpec="a"
-                latin:keyHintLabel="\@"
-                latin:additionalMoreKeys="\\@"
+                latin:keyHintLabel="~"
+                latin:additionalMoreKeys="~"
                 latin:moreKeys="!text/morekeys_a" />
             <Key
                 latin:keySpec="s"
@@ -43,28 +43,28 @@
                 latin:additionalMoreKeys="%" />
             <Key
                 latin:keySpec="g"
-                latin:keyHintLabel="&amp;"
-                latin:additionalMoreKeys="&amp;"
+                latin:keyHintLabel=":"
+                latin:additionalMoreKeys=":"
                 latin:moreKeys="!text/morekeys_g" />
             <Key
                 latin:keySpec="h"
-                latin:keyHintLabel="-"
-                latin:additionalMoreKeys="-"
+                latin:keyHintLabel="|"
+                latin:additionalMoreKeys="\\|"
                 latin:moreKeys="!text/morekeys_h" />
             <Key
                 latin:keySpec="j"
-                latin:keyHintLabel="+"
-                latin:additionalMoreKeys="+"
+                latin:keyHintLabel="&quot;"
+                latin:additionalMoreKeys="&quot;"
                 latin:moreKeys="!text/morekeys_j" />
             <Key
                 latin:keySpec="k"
-                latin:keyHintLabel="("
-                latin:additionalMoreKeys="("
+                latin:keyHintLabel="&apos;"
+                latin:additionalMoreKeys="&apos;"
                 latin:moreKeys="!text/morekeys_k" />
             <Key
                 latin:keySpec="l"
-                latin:keyHintLabel=")"
-                latin:additionalMoreKeys=")"
+                latin:keyHintLabel=";"
+                latin:additionalMoreKeys=";"
                 latin:moreKeys="!text/morekeys_l" />
         </case>
         <default>

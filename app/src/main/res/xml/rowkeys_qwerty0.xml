@@ -50,25 +50,45 @@
         </case>
         <default>
             <Key
-                latin:keySpec="1" />
+                latin:keySpec="1"
+                latin:keyHintLabel="!"
+                latin:additionalMoreKeys="!" />
             <Key
-                latin:keySpec="2" />
+                latin:keySpec="2"
+                latin:keyHintLabel="\@"
+                latin:additionalMoreKeys="\@" />
             <Key
-                latin:keySpec="3" />
+                latin:keySpec="3"
+                latin:keyHintLabel="\#"
+                latin:additionalMoreKeys="\#" />
             <Key
-                latin:keySpec="4" />
+                latin:keySpec="4"
+                latin:keyHintLabel="\$"
+                latin:additionalMoreKeys="\$" />
             <Key
-                latin:keySpec="5" />
+                latin:keySpec="5"
+                latin:keyHintLabel="!text/keyspec_symbols_percent"
+                latin:additionalMoreKeys="!text/keyspec_symbols_percent" />
             <Key
-                latin:keySpec="6" />
+                latin:keySpec="6"
+                latin:keyHintLabel="^"
+                latin:additionalMoreKeys="^" />
             <Key
-                latin:keySpec="7" />
+                latin:keySpec="7"
+                latin:keyHintLabel="&amp;"
+                latin:additionalMoreKeys="&amp;" />
             <Key
-                latin:keySpec="8" />
+                latin:keySpec="8"
+                latin:keyHintLabel="*"
+                latin:additionalMoreKeys="*" />
             <Key
-                latin:keySpec="9" />
+                latin:keySpec="9"
+                latin:keyHintLabel="!text/keyspec_left_parenthesis"
+                latin:additionalMoreKeys="!text/keyspec_left_parenthesis" />
             <Key
-                latin:keySpec="0" />
+                latin:keySpec="0"
+                latin:keyHintLabel="!text/keyspec_right_parenthesis"
+                latin:additionalMoreKeys="!text/keyspec_right_parenthesis" />
         </default>
     </switch>
 </merge>

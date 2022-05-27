@@ -29,22 +29,18 @@
         latin:keyWidth="10%p"
     >
         <include
-            latin:keyboardLayout="@xml/rowkeys_qwerty2"
-            latin:keyXPos="5%p" />
+            latin:keyboardLayout="@xml/rowkeys_qwerty2" />
+        <Key
+            latin:keyStyle="deleteKeyStyle"
+            latin:keyXPos="90%p"
+            latin:keyWidth="10%p" />
     </Row>
     <Row
         latin:keyWidth="10%p"
     >
         <Key
-            latin:keyStyle="shiftKeyStyle"
-            latin:keyWidth="14%p" />
-        <include
-            latin:keyXPos="15%p"
-            latin:keyboardLayout="@xml/rowkeys_qwerty3" />
-        <Key
-            latin:keyStyle="deleteKeyStyle"
-            latin:keyXPos="86%p"
-            latin:keyWidth="14%p" />
+            latin:keyStyle="shiftKeyStyle" />
+        <include latin:keyboardLayout="@xml/rowkeys_qwerty3" />
     </Row>
     <include
         latin:keyboardLayout="@xml/row_qwerty4" />
