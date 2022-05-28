@@ -34,12 +34,7 @@ public final class AppearanceSettingsFragment extends SubScreenFragment {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.prefs_screen_appearance);
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
-            removePreference(Settings.PREF_MATCHING_NAVBAR_COLOR);
-        }
-
         setupKeyboardHeightSettings();
-        setupKeyboardColorSettings();
     }
 
     @Override
@@ -112,32 +107,6 @@ public final class AppearanceSettingsFragment extends SubScreenFragment {
 
             @Override
             public void feedbackValue(final int value) {}
-        });
-    }
-
-    private void setupKeyboardColorSettings() {
-        final ColorDialogPreference pref = (ColorDialogPreference)findPreference(
-                Settings.PREF_KEYBOARD_COLOR);
-        if (pref == null) {
-            return;
-        }
-        final SharedPreferences prefs = getSharedPreferences();
-        final Context context = this.getActivity().getApplicationContext();
-        pref.setInterface(new ColorDialogPreference.ValueProxy() {
-            @Override
-            public void writeValue(final int value, final String key) {
-                prefs.edit().putInt(key, value).apply();
-            }
-
-            @Override
-            public int readValue(final String key) {
-                return Settings.readKeyboardColor(prefs, context);
-            }
-
-            @Override
-            public void writeDefaultValue(final String key) {
-                Settings.removeKeyboardColor(prefs);
-            }
         });
     }
 }
