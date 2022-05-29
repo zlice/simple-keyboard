@@ -23,40 +23,30 @@
          Ideally just the keyWidth should be different and the spacer should adjust to fill
          the available space. -->
     <!-- First row -->
-    <Row>
+        <Row
+        latin:keyWidth="10%p"
+    >
         <include
-            latin:keyboardLayout="@xml/rowkeys_qwerty1"
-            latin:keyWidth="9.0%p" />
+            latin:keyboardLayout="@xml/rowkeys_qwerty1" />
+    </Row>
+    <Row
+        latin:keyWidth="10%p"
+    >
+        <include
+            latin:keyboardLayout="@xml/rowkeys_qwerty2" />
         <Key
             latin:keyStyle="deleteKeyStyle"
-            latin:keyWidth="fillRight" />
+            latin:keyXPos="90%p"
+            latin:keyWidth="10%p" />
     </Row>
-    <!-- Second row -->
-    <Row>
-        <include
-            latin:keyboardLayout="@xml/rowkeys_qwerty2"
-            latin:keyXPos="4.5%p"
-            latin:keyWidth="9.0%p" />
+    <Row
+        latin:keyWidth="10%p"
+    >
         <Key
-            latin:keyStyle="enterKeyStyle"
-            latin:keyWidth="fillRight" />
+            latin:keyStyle="shiftKeyStyle" />
+        <include latin:keyboardLayout="@xml/rowkeys_qwerty3" />
     </Row>
-    <!-- Third row -->
-    <Row>
-        <Key
-            latin:keyStyle="shiftKeyStyle"
-            latin:keyWidth="10.0%p" />
-        <include
-            latin:keyboardLayout="@xml/rowkeys_qwerty3"
-            latin:keyWidth="9.0%p" />
-        <include
-            latin:keyboardLayout="@xml/keys_exclamation_question"
-            latin:keyWidth="9.0%p" />
-        <Key
-            latin:keyStyle="shiftKeyStyle"
-            latin:keyWidth="fillRight" />
-    </Row>
-    <!-- Fourth row -->
     <include
         latin:keyboardLayout="@xml/row_qwerty4" />
+
 </merge>

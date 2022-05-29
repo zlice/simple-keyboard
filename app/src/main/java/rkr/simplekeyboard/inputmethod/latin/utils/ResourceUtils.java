@@ -16,6 +16,7 @@
 
 package rkr.simplekeyboard.inputmethod.latin.utils;
 
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -188,20 +189,24 @@ public final class ResourceUtils {
 
     public static int getDefaultKeyboardHeight(final Resources res) {
         final DisplayMetrics dm = res.getDisplayMetrics();
-        final float keyboardHeight = res.getDimension(R.dimen.config_default_keyboard_height);
+        // zlice - useless? can you rely on 'dp'?
+        //final float keyboardHeight = res.getDimension(R.dimen.config_default_keyboard_height);
         final float maxKeyboardHeight = res.getFraction(
                 R.fraction.config_max_keyboard_height, dm.heightPixels, dm.heightPixels);
         float minKeyboardHeight = res.getFraction(
                 R.fraction.config_min_keyboard_height, dm.heightPixels, dm.heightPixels);
-        if (minKeyboardHeight < 0.0f) {
-            // Specified fraction was negative, so it should be calculated against display
-            // width.
-            minKeyboardHeight = -res.getFraction(
-                    R.fraction.config_min_keyboard_height, dm.widthPixels, dm.widthPixels);
-        }
+        // zlice - not sure how 'negative' height works but it borks zenfone 8 with custom layout
+        //if (minKeyboardHeight < 0.0f) {
+        //    // Specified fraction was negative, so it should be calculated against display
+        //    // width.
+        //    minKeyboardHeight = -res.getFraction(
+        //            R.fraction.config_min_keyboard_height, dm.widthPixels, dm.widthPixels);
+        //}
+
         // Keyboard height will not exceed maxKeyboardHeight and will not be less than
         // minKeyboardHeight.
-        return (int)Math.max(Math.min(keyboardHeight, maxKeyboardHeight), minKeyboardHeight);
+        return (int)Math.max(maxKeyboardHeight, minKeyboardHeight);
+        //return (int)Math.max(Math.min(keyboardHeight, maxKeyboardHeight), minKeyboardHeight);
     }
 
     public static boolean isValidFraction(final float fraction) {
